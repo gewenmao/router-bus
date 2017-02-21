@@ -1,0 +1,19 @@
+{
+  "name": "router-bus",
+  "version": "1.0.0",
+  "description": "get koa routes from path",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./example/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gewenmao <gewenmao@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "koa-router": "^5.4.0",
+    "path-tracer": "^1.0.0"
+  },
+  "devDependencies": {
+    "koa": "^1.2.5"
+  }
+}

@@ -1,18 +1,18 @@
 'use strict'
 
-var tracer = require('path-tracer');
-var router = require('koa-router')();
+const tracer = require('path-tracer');
+const Router = require('koa-router');
+const router = new Router();
 
 function getRouterFromFiles(path) {
-
     let routerList = [];
 
     tracer
         .getFiles(path, {pattern: /js$/})
         .map(f => {
-            let router = require(f);
-            if (router) {
-                routerList = routerList.concat(router);
+            const r = require(f);
+            if (r) {
+                routerList = routerList.concat(r);
             }
         })
 
@@ -20,11 +20,10 @@ function getRouterFromFiles(path) {
 }
 
 function getRouterFromPath(path) {
-
     getRouterFromFiles(path)
         .map(r => {
-            let methods = [].concat(r.method || 'get');
-            let urls = [].concat(r.url);
+            const methods = [].concat(r.method || 'get');
+            const urls = [].concat(r.url);
 
             methods.map(method => {
                 urls.map(url => {

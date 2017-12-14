@@ -1,11 +1,11 @@
 module.exports = [{
-    url: ['/index', '/'],
-    controller: function *() {
-        this.body = 'This is index page'
-    }
+  url: ['/index', '/'],
+  controller: function (ctx, next) {
+    ctx.body = 'This is index page'
+  }
 },{
-    url: '/main',
-    controller: function *() {
-        this.body = 'This is main page'
-    }
+  url: '/main',
+  controller: function (ctx, next) {
+    ctx.body = 'This is main page'
+  }
 }]

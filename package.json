@@ -10,10 +10,10 @@
   "author": "gewenmao <gewenmao@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "koa-router": "^5.4.0",
+    "koa-router": "^7.3.0",
     "path-tracer": "^1.0.0"
   },
   "devDependencies": {
-    "koa": "^1.2.5"
+    "koa": "^2.4.1"
   }
 }
